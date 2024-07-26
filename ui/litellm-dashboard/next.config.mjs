@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: '/ui',
+    basePath: process.env.LITELLM_UI_BASE_PATH,
 };
 
 nextConfig.experimental = {

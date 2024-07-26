@@ -62,7 +62,7 @@ RUN pip install PyJWT --no-cache-dir
 RUN chmod +x build_admin_ui.sh && ./build_admin_ui.sh
 
 # Generate prisma client
-RUN prisma generate
+RUN export NODE_EXTRA_CA_CERTS=/app/cert.pem && export SSL_CERT_FILE=/app/cert.pem && prisma generate
 RUN chmod +x entrypoint.sh
 
 EXPOSE 4000/tcp
