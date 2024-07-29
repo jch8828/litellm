@@ -18,7 +18,7 @@ import { jwtDecode } from "jwt-decode";
 import { Typography } from "antd";
 const isLocal = process.env.NODE_ENV === "development";
 console.log("isLocal:", isLocal);
-const proxyBaseUrl = isLocal ? "http://localhost:4000" : null;
+const proxyBaseUrl = isLocal ? "http://localhost:4000" : process.env.PROXY_BASE_URL;
 
 type UserSpendData = {
   spend: number;

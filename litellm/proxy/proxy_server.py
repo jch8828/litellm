@@ -275,7 +275,10 @@ except Exception as e:
 
 _license_check = LicenseCheck()
 premium_user: bool = _license_check.is_premium()
-ui_link = f"/ui/"
+root_path=os.environ.get(
+        "PROXY_BASE_URL", ""
+    )
+ui_link = f"{root_path}/ui/"
 ui_message = (
     f"👉 [```LiteLLM Admin Panel on /ui```]({ui_link}). Create, Edit Keys with SSO"
 )
