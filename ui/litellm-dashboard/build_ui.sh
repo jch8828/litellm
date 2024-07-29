@@ -24,7 +24,7 @@ echo "Contents of ui_colors.json:"
 cat ui_colors.json
 
 # Run npm build
-export LITELLM_UI_BASE_PATH=/dev/litellm/unique_path && npm run build
+export LITELLM_UI_BASE_PATH=/dev/litellm/unique_path/ui && npm run build
 
 # Check if the build was successful
 if [ $? -eq 0 ]; then
